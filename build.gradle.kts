@@ -15,12 +15,14 @@ val quarkusPlatformVersion: String by project
 
 dependencies {
     implementation(enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}"))
+    implementation("io.quarkus:quarkus-arc")
     implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
     implementation("io.quarkus:quarkus-resteasy-reactive")
     implementation("io.quarkus:quarkus-kotlin")
+    implementation("io.quarkus:quarkus-mongodb-panache")
     implementation("io.quarkus:quarkus-mongodb-panache-kotlin")
+    implementation("io.quarkus:quarkus-mutiny")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("io.quarkus:quarkus-arc")
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
 }
@@ -40,6 +42,7 @@ allOpen {
     annotation("javax.ws.rs.Path")
     annotation("javax.enterprise.context.ApplicationScoped")
     annotation("io.quarkus.test.junit.QuarkusTest")
+    annotation("de.bernard.annotation.DTO")
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
