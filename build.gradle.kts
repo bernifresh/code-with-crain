@@ -22,6 +22,8 @@ dependencies {
     implementation("io.quarkus:quarkus-mongodb-panache")
     implementation("io.quarkus:quarkus-mongodb-panache-kotlin")
     implementation("io.quarkus:quarkus-mutiny")
+    implementation("io.quarkus:quarkus-smallrye-reactive-messaging")
+    implementation("io.quarkus:quarkus-smallrye-reactive-messaging-mqtt")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
